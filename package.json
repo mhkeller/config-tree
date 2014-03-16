@@ -1,17 +1,17 @@
 {
-  "name": "init-package-json",
-  "version": "0.0.15",
-  "main": "init-package-json.js",
+  "name": "ajmint-init",
+  "version": "0.0.1",
+  "main": "main/ajmint-init.js",
   "scripts": {
     "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/isaacs/init-package-json"
+    "url": "git://github.com/mhkeller/init-package-json"
   },
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Michael Keller",
   "license": "ISC",
-  "description": "A node module to get your node module started",
+  "description": "A fork of Isaac Schlueter's init-package-json for to help with Ajam's S3 deployment.",
   "dependencies": {
     "promzard": "~0.2.0",
     "read": "~1.0.1",
