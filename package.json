@@ -1,17 +1,17 @@
 {
-  "name": "test-project",
-  "version": "0.0.1",
-  "main": "main/ajmint-init.js",
+  "name": "strangelove-config",
+  "version": "0.1.0",
+  "main": "main/strangelove-config.js",
   "scripts": {
     "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mhkeller/init-package-json"
+    "url": "git://github.com/mhkeller/strangelove-config"
   },
   "author": "Michael Keller",
   "license": "ISC",
-  "description": "A fork of Isaac Schlueter's init-package-json for to help with Ajam's S3 deployment.",
+  "description": "A fork of Isaac Schlueter's init-package-json for use with creating the config options for Strangelove.",
   "dependencies": {
     "promzard": "~0.2.0",
     "read": "~1.0.1",
@@ -34,10 +34,7 @@
     "start"
   ],
   "bugs": {
-    "url": "https://github.com/mhkeller/init-package-json/issues"
+    "url": "https://github.com/mhkeller/strangelove-config/issues"
   },
-  "homepage": "https://github.com/mhkeller/init-package-json",
-  "dir": "2014/test-project",
-  "archive": "https://bitbucket.org/mhkeller/init-package-json.git",
-  "archived": false
+  "homepage": "https://github.com/mhkeller/strangelove-config",
 }
