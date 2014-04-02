@@ -14,6 +14,10 @@ var read = require('read')
 // readJson.extras(file, data, cb)
 var readJson = require('read-package-json')
 
+function checkConfig(path){
+  return fs.existsSync(path)
+}
+
 function init (dir, input, config, cb) {
   if (typeof config === 'function')
     cb = config, config = {}
@@ -32,7 +36,20 @@ function init (dir, input, config, cb) {
     }
   }
 
-  var package = path.resolve(dir, 'package.json')
+  var package,
+      package_out,
+      config_path = path.resolve(dir, '..', 'config.json'),
+      config_sample_path = path.resolve(dir, '..', 'config.sample.json'),
+      config_exists = checkConfig( config_path ),
+
+  if (config_exists){
+    package = config_path
+  } else {
+    package = config_sample_path
+  }
+
+  package_out = config_path
+
   input = path.resolve(input)
   var pkg
   var ctx = {}
@@ -62,6 +79,7 @@ function init (dir, input, config, cb) {
     pz.backupFile = def
     pz.on('error', cb)
     pz.on('data', function (data) {
+      console.log(data)
       Object.keys(data).forEach(function (k) {
         if (data[k] !== undefined && data[k] !== null) pkg[k] = data[k]
       })
@@ -86,6 +104,11 @@ function init (dir, input, config, cb) {
         // ditto
         delete pkg.gitHead
 
+        // Get rid of some of the npm init defaults
+        delete pkg.name
+        delete pkg.description
+        delete pkg.version
+
         // if the repo is empty, remove it.
         if (!pkg.repository)
           delete pkg.repository
@@ -96,7 +119,7 @@ function init (dir, input, config, cb) {
           if (!ok || ok.toLowerCase().charAt(0) !== 'y') {
             console.log('Aborted.')
           } else {
-            fs.writeFile(package, d, 'utf8', function (er) {
+            fs.writeFile(package_out, d, 'utf8', function (er) {
               return cb(er, pkg)
             })
           }

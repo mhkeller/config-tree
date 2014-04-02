@@ -1,5 +1,5 @@
 {
-  "name": "ajmint-init",
+  "name": "test-project",
   "version": "0.0.1",
   "main": "main/ajmint-init.js",
   "scripts": {
@@ -32,5 +32,12 @@
     "wizerd",
     "prompt",
     "start"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/mhkeller/init-package-json/issues"
+  },
+  "homepage": "https://github.com/mhkeller/init-package-json",
+  "dir": "2014/test-project",
+  "archive": "https://bitbucket.org/mhkeller/init-package-json.git",
+  "archived": false
 }
