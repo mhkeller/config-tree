@@ -17,7 +17,7 @@ exports.archive = {}
 exports.github.type           = prompt('GitHub account type', package.github.type)
 exports.github.account        = prompt('Account name')
 exports.github.access_token   = prompt('Github access token')
-exports.github.private_repos  = prompt('Create private repos by default?', package.github.private_repos)
+exports.github.private_repos  = prompt('Create private repos by default?', String(package.github.private_repos) )
 
 exports.server.url = prompt('Strangelove server url:port', package.server.url)
 

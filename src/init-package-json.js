@@ -1,6 +1,5 @@
 
 module.exports = init
-
 var PZ = require('promzard').PromZard
 var path = require('path')
 var def = require.resolve('./default-input.js')
@@ -22,7 +21,6 @@ function init (dir, input, config, cb) {
   if (typeof config === 'function')
     cb = config, config = {}
 
-  // accept either a plain-jane object, or a config object
   // with a "get" method.
   if (typeof config.get !== 'function') {
     var data = config
@@ -38,9 +36,9 @@ function init (dir, input, config, cb) {
 
   var package,
       package_out,
-      config_path = path.resolve(dir, '..', 'config.json'),
-      config_sample_path = path.resolve(dir, '..', 'config.sample.json'),
-      config_exists = checkConfig( config_path ),
+      config_path = path.resolve(dir, 'config.json'),
+      config_sample_path = path.resolve(dir, 'config.sample.json'),
+      config_exists = checkConfig( config_path );
 
   if (config_exists){
     package = config_path
@@ -61,8 +59,8 @@ function init (dir, input, config, cb) {
   readJson(package, function (er, d) {
     readJson.extraSet = es
 
-    if (er) pkg = {}
-    else pkg = d
+    if (er) { pkg = {}; throw new Error(er) }
+    else { pkg = d }
 
     ctx.filename = package
     ctx.dirname = path.dirname(package)
