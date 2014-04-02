@@ -14,7 +14,7 @@ boom config
 {
 	"github": {
 		"type": "Either `org` or `individual`",
-		"account": "The GitHub org or individual account name",
+		"account_name": "The GitHub org or individual account name",
 		"access_token": "Your GitHub access token",
 		"private_repos": false
 	},
