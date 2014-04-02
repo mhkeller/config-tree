@@ -1,6 +1,6 @@
 {
   "name": "snowy-owl-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "main/config.js",
   "scripts": {
     "test": "tap test/*.js"
