@@ -1,6 +1,6 @@
-# Strangelove config
+# Snowy Owl Config
 
-A node module to set configs to get your [strangelove-cli](https://github.com/mhkeller/strangelove-cli) started.
+A node module to set configs to get your [snowy-owl-cli](https://github.com/mhkeller/snowy-wol-cli) started.
 
 ## Usage
 
@@ -30,4 +30,4 @@ boom config
 }
 ````
 
-See [strangelove-cli](https://github.com/mhkeller/strangelove-cli) for the full documentation.
+See [snowy-owl-cli](https://github.com/mhkeller/snowy-owl-cli) for the full documentation.

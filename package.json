@@ -1,17 +1,17 @@
 {
-  "name": "strangelove-config",
-  "version": "0.1.1",
-  "main": "main/strangelove-config.js",
+  "name": "snowy-owl-config",
+  "version": "0.1.0",
+  "main": "main/config.js",
   "scripts": {
     "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mhkeller/strangelove-config"
+    "url": "git://github.com/mhkeller/snowy-owl-config"
   },
   "author": "Michael Keller",
   "license": "ISC",
-  "description": "A fork of Isaac Schlueter's init-package-json for use with creating the config options for Strangelove.",
+  "description": "A fork of Isaac Schlueter's init-package-json for use with creating the config options for Snowy Owl.",
   "dependencies": {
     "promzard": "~0.2.0",
     "read": "~1.0.1",
@@ -34,7 +34,7 @@
     "start"
   ],
   "bugs": {
-    "url": "https://github.com/mhkeller/strangelove-config/issues"
+    "url": "https://github.com/mhkeller/snowy-owl-config/issues"
   },
-  "homepage": "https://github.com/mhkeller/strangelove-config"
+  "homepage": "https://github.com/mhkeller/snowy-owl-config"
 }
