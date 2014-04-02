@@ -23,7 +23,7 @@ exports.github.private_repos  = prompt('Create private repos by default?', Strin
   return repos
 });
 
-exports.server.url = prompt('Strangelove server url:port', package.server.url)
+exports.server.url = prompt('Snowy Owl server url:port', package.server.url)
 
 var archive_enabled;
 exports.archive.enabled = prompt('Enable archiving', String(package.archive.enabled), function(enabled){
