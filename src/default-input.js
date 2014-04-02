@@ -19,7 +19,7 @@ exports.github.account      = prompt('Account name')
 exports.github.access_token = prompt('Github access token')
 exports.github.private      = prompt('Create private repos by default?', package.github.private)
 
-exports.server.url = prompt('Strangelove server url', package.server.url)
+exports.server.url = prompt('Strangelove server url:port', package.server.url)
 
 var archive_enabled;
 exports.archive.enabled = prompt('Enable archiving', String(package.archive.enabled), function(enabled){

@@ -1,43 +1,33 @@
-# init-package-json
+# Strangelove config
 
-A node module to get your node module started.
+A node module to set configs to get your [strangelove-cli](https://github.com/mhkeller/strangelove-cli) started.
 
 ## Usage
 
-```javascript
-var init = require('init-package-json')
-var path = require('path')
+````
+boom config
+````
 
-// a path to a promzard module.  In the event that this file is
-// not found, one will be provided for you.
-var initFile = path.resolve(process.env.HOME, '.npm-init')
+## Options
 
-// the dir where we're doin stuff.
-var dir = process.cwd()
+````
+{
+	"github": {
+		"type": "Either `org` or `individual`",
+		"account": "The GitHub org or individual account name",
+		"access_token": "Your GitHub access token",
+		"private_repos": false
+	},
+	"server": {
+		"url": "The url and port of your server"
+	},
+	"archive": {
+		"enabled": false,
+		"type": "Either `bitbucket` or `github`",
+		"account_name": "Your GitHub or Bitbucket account name",
+		"access_token": "Account access token"
+	}
+}
+````
 
-// extra stuff that gets put into the PromZard module's context.
-// In npm, this is the resolved config object.  Exposed as 'config'
-// Optional.
-var configData = { some: 'extra stuff' }
-
-// Any existing stuff from the package.json file is also exposed in the
-// PromZard module as the `package` object.  There will also be free
-// vars for:
-// * `filename` path to the package.json file
-// * `basename` the tip of the package dir
-// * `dirname` the parent of the package dir
-
-init(dir, initFile, configData, function (er, data) {
-  // the data's already been written to {dir}/package.json
-  // now you can do stuff with it
-})
-```
-
-Or from the command line:
-
-```
-$ npm-init
-```
-
-See [PromZard](https://github.com/isaacs/promzard) for details about
-what can go in the config file.
+See [strangelove-cli](https://github.com/mhkeller/strangelove-cli) for the full documentation.
