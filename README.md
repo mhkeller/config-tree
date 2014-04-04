@@ -41,7 +41,11 @@ exports.awesome     = prompt('Is it awesome?', package.awesome.toString(), funct
 
 ## Calling it from your project
 
-Make a file somewhere in your package that is called whenever you run your command line statement to configure that looks like this. Pass the directory containing `config.sample.json` and `default-input.js` to the `config_tree.sprout()`. In this example, this file is in the same directory.
+Make a file somewhere in your package, the location isn't too important. In the gif above, this is what `main.js` looks like.
+
+When setting up the command-line interface for your project, run this file for whatever you config command is.
+
+Pass the directory containing `config.sample.json` and `default-input.js` to the `config_tree.sprout()`. In this example, this file is in the same directory.
 
 ````
 var config_tree = require('config-tree');
