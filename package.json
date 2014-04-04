@@ -1,17 +1,17 @@
 {
-  "name": "snowy-owl-config",
-  "version": "0.1.2",
+  "name": "config-tree",
+  "version": "0.1.0",
   "main": "main/config.js",
   "scripts": {
     "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mhkeller/snowy-owl-config"
+    "url": "git://github.com/mhkeller/config-tree"
   },
   "author": "Michael Keller",
   "license": "ISC",
-  "description": "A fork of Isaac Schlueter's init-package-json for use with creating the config options for Snowy Owl.",
+  "description": "A reworking of init-package-json to make reusable prompt-based CLIs for making config.json files.",
   "dependencies": {
     "promzard": "~0.2.0",
     "read": "~1.0.1",
@@ -25,8 +25,8 @@
   },
   "keywords": [
     "init",
-    "package.json",
-    "package",
+    "config.sample.json",
+    "config.json",
     "helper",
     "wizard",
     "wizerd",
@@ -34,7 +34,7 @@
     "start"
   ],
   "bugs": {
-    "url": "https://github.com/mhkeller/snowy-owl-config/issues"
+    "url": "https://github.com/mhkeller/config-tree/issues"
   },
-  "homepage": "https://github.com/mhkeller/snowy-owl-config"
+  "homepage": "https://github.com/mhkeller/config-tree"
 }
