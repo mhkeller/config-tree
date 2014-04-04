@@ -37,9 +37,9 @@ exports.awesome     = prompt('Is it awesome?', package.awesome.toString(), funct
 
 ````
 
-*Note: Cast booleans to string so they show up in the interface as text and parse them with JSON so they don't end up as strings. See [Promzard](https://github.com/isaacs/promzard) for more info about `prompt`*
+*Note: Cast booleans to string so they show up in the interface as text and parse them with JSON so they don't end up as strings. See [Promzard](https://github.com/isaacs/promzard) for more info about `prompt`.*
 
-## Usage
+## Calling it from your project
 
 Make a file somewhere in your package that is called whenever you run your command line statement to configure that looks like this. Pass the directory containing `config.sample.json` and `default-input.js` to the `config_tree.sprout()`. In this example, this file is in the same directory.
 
@@ -49,6 +49,6 @@ var config_tree = require('config-tree');
 config_tree.sprout(__dirname);
 ````
 
-That's it.
+That's it!
 
 ###### Package named by [Brian Abelson](https://github.com/abelsonlive)
