@@ -45,3 +45,5 @@ config_tree.sprout(__dirname);
 ````
 
 That's it.
+
+###### Package named by [Brian Abelson](https://github.com/abelsonlive)
