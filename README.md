@@ -2,6 +2,8 @@
 
 A reworking of [init-package-json](https://github.com/npm/init-package-json) to make reusable prompt-based CLIs for making config.json files.
 
+![](https://raw.githubusercontent.com/mhkeller/config-tree/master/test/config-tree-example.gif)
+
 ## Why?
 
 This package generalizes npm's `npm init` interface so you can require it as its own module and set your project-specific prompts in your project -- where they belong -- in a file called `default-input.js`,
