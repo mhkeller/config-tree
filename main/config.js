@@ -1,10 +1,10 @@
 var init = require('../src/init-package-json.js')
-var path = require('path')
 
-module.exports = {
-	config: function(dir){
-		init(dir, 'file that does not exist', function (err, data) {
-		  if (!err) console.log('written successfully')
-		});
-	}
-} 
+function configFromDir(dir){
+	init(dir, 'file that does not exist', function (err, data) {
+	  if (!err) console.log('written successfully')
+	});
+}
+
+module.exports = {};
+module.exports.sprout = configFromDir;
