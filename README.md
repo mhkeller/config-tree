@@ -14,13 +14,13 @@ It bakes out a `config.json` file, so your project should look to load that file
 
 ## Setup
 
-A `config.sample.json` example:
+A `config.sample.json` example with example or default values:
 
 ````
 {
 	"name": "my-project",
-	"description": "",
-	"awesome": true
+	"description": "A default value",
+	"awesome": false
 }
 ````
 
@@ -29,10 +29,13 @@ A `default-input.js` example:
 ````
 exports.name        = prompt('Name', package.name)
 exports.description = prompt('Description', package.description)
-exports.awesome     = prompt('Description', package.awesome.toString())
+exports.awesome     = prompt('Is it awesome?', package.awesome.toString(), function(response){
+	return JSON.parse(response)
+})
+
 ````
 
-*Note: Cast booleans to string so they show up in the interface as text.*
+*Note: Cast booleans to string so they show up in the interface as text and parse them with JSON so they don't end up as strings. See [Promzard](https://github.com/isaacs/promzard) for more info about `prompt`*
 
 ## Usage
 
