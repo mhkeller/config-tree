@@ -1,8 +1,9 @@
-# Config Tree
+Config Tree
+===
 
 A reworking of [init-package-json](https://github.com/npm/init-package-json) to make reusable prompt-based CLIs for making config.json files.
 
-![](https://raw.githubusercontent.com/mhkeller/config-tree/master/test/config-tree-example.gif)
+![](https://raw.githubusercontent.com/mhkeller/config-tree/master/assets/config-tree-example.gif)
 
 ## Why?
 
