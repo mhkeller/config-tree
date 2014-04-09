@@ -6,7 +6,6 @@ A reworking of [init-package-json](https://github.com/npm/init-package-json) to 
 ![](https://raw.githubusercontent.com/mhkeller/config-tree/master/assets/config-tree-example.gif)
 
 ## Why?
-
 This package generalizes npm's `npm init` interface so you can require it as its own module and set your project-specific prompts in your project -- where they belong -- in a file called `default-input.js`,
 
 ## Opinions
@@ -28,7 +27,7 @@ A `config.sample.json` example with example or default values:
 ````
 
 A `default-input.js` example:
-
+br
 ````
 exports.name        = prompt('Name', package.name)
 exports.description = prompt('Description', package.description)
@@ -56,4 +55,7 @@ config_tree.sprout(__dirname);
 
 That's it!
 
+![](https://raw.githubusercontent.com/mhkeller/config-tree/master/assets/config-tree.png)
+
+###### Logo by [Clarisa Diaz](https://twitter.com/Clarii_D)
 ###### Package named by [Brian Abelson](https://github.com/abelsonlive)
