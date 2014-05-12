@@ -42,7 +42,7 @@ function init (dir, input, config, cb) {
     pkg = require(config_sample_path)
   }
 
-  package_out = config_path
+  package_out = config_path // Possibly change this to ~/.conf/ but that would require program-specific config file names and things
 
   input = path.resolve(input)
   var ctx = {}
