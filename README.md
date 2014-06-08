@@ -59,7 +59,9 @@ config_tree.sprout(__dirname, 'name-prefix');
 
 That's it!
 
-![](https://raw.githubusercontent.com/mhkeller/config-tree/master/assets/config-tree.png)
+<p align="center">
+ <img src="https://raw.githubusercontent.com/mhkeller/config-tree/master/assets/config-tree.png"/>
+</p>
 
 ###### Logo by [Clarisa Diaz](https://twitter.com/Clarii_D)
 ###### Name by [Brian Abelson](https://github.com/abelsonlive)
