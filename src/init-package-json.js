@@ -6,11 +6,11 @@ var path = require('path')
 var fs = require('fs')
 var read = require('read')
 
-function checkConfig(path){
+function dirExists(path){
   return fs.existsSync(path)
 }
 
-function init (dir, input, config, cb) {
+function init (dir, name_prefix, input, config, cb) {
   if (typeof config === 'function')
     cb = config, config = {}
 
@@ -27,12 +27,20 @@ function init (dir, input, config, cb) {
     }
   }
 
+  // Find and set `.conf` dir
+  var home_dir = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE,
+  		conf_dir_path = home_dir + '/.conf'
+  		conf_dir_exists = dirExists( conf_dir_path );
+
+  // If it doesn't exist, create the `.conf` folder
+  if (!conf_dir_exists)	fs.mkdirSync( conf_dir_path );
+
   var package,
       pkg,
       package_out,
-      config_path = path.resolve(dir, 'config.json'),
+      config_path = conf_dir_path + '/' + name_prefix + '-config.json',
       config_sample_path = path.resolve(dir, 'config.sample.json'),
-      config_exists = checkConfig( config_path );
+      config_exists = dirExists( config_path );
 
   if (config_exists){
     package = config_path

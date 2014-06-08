@@ -1,10 +1,7 @@
 {
   "name": "config-tree",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "main/config.js",
-  "scripts": {
-    "test": "tap test/*.js"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mhkeller/config-tree"

@@ -12,7 +12,7 @@ This package generalizes npm's `npm init` interface so you can require it as its
 
 This package assumes that in your project root folder you have `config.sample.json` and `default-input.js` files that contain any default options or examples of what users could input.
 
-It bakes out a `config.json` file, so your project should look to load that file by default.
+It bakes out a `config.json` file in `~/.conf/`, so your project should look to load that file by default.
 
 ## Setup
 
@@ -41,19 +41,21 @@ exports.awesome     = prompt('Is it awesome?', package.awesome.toString(), funct
 
 ## Calling it from your project
 
-Make a file somewhere in your package, the location isn't too important.
-
-When setting up the command-line interface for your project, run this file for whatever you config command is.
-
-Pass the directory containing `config.sample.json` and `default-input.js` to the `config_tree.sprout()`. In this example, this file is in the same directory.
+Once you have those two files set up, point your command-line script to a javascript file that looks like this. 
 
 In the gif above, this is what `main.js` looks like.
 
 ````
 var config_tree = require('config-tree');
 
-config_tree.sprout(__dirname);
+config_tree.sprout(__dirname, 'name-prefix');
 ````
+
+`.sprout` takes two arguments:
+
+1. The directory that contains your `default-input.js` and `config.sample.json` file. 
+2. A name prefix so that multple config files in `~/.conf/` don't conflict.
+
 
 That's it!
 
