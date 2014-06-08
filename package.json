@@ -1,7 +1,7 @@
 {
   "name": "config-tree",
-  "version": "0.2.0",
-  "main": "main/config.js",
+  "version": "0.2.1",
+  "main": "main/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/mhkeller/config-tree"
