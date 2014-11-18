@@ -18,7 +18,7 @@ It bakes out a `config.json` file in `~/.conf/`, so your project should look to 
 
 A `config.sample.json` example with example or default values:
 
-````
+````json
 {
 	"name": "my-project",
 	"description": "A default value",
@@ -28,7 +28,7 @@ A `config.sample.json` example with example or default values:
 
 A `default-input.js` example:
 
-````
+````js
 exports.name        = prompt('Name', package.name)
 exports.description = prompt('Description', package.description)
 exports.awesome     = prompt('Is it awesome?', package.awesome.toString(), function(response){
@@ -45,7 +45,7 @@ Once you have those two files set up, point your command-line script to a javasc
 
 In the gif above, this is what `main.js` looks like.
 
-````
+````js
 var config_tree = require('config-tree');
 
 config_tree.sprout(__dirname, 'name-prefix');
