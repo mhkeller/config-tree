@@ -1,6 +1,6 @@
 {
   "name": "config-tree",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "main/index.js",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "description": "A reworking of npm's init-package-json to make reusable prompt-based CLIs for making config.json files.",
   "dependencies": {
     "promzard": "~0.2.0",
-    "read": "~1.0.1"
+    "read": "~1.0.1",
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "tap": "~0.2.5",
