@@ -1,11 +1,10 @@
 module.exports = init
 var PZ = require('promzard').PromZard;
 var path = require('path');
-
 var fs = require('fs');
 var read = require('read');
 var extend = require('./extend.js')
-
+var chalk = require('chalk');
 var _ = require('underscore');
 var io = require('indian-ocean');
 
@@ -76,7 +75,7 @@ function init (dir, name_prefix, input, config, cb) {
 
     var d = JSON.stringify(pkg, null, 2) + '\n';
     console.log('About to write to %s:\n\n%s\n', package_out, d);
-    read({prompt:'Is this ok? ', default: 'yes'}, function (er, ok) {
+    read({prompt: chalk.cyan('Is this ok? '), default: 'yes'}, function (er, ok) {
       if (!ok || ok.toLowerCase().charAt(0) !== 'y') {
         console.log('Aborted.');
       } else {

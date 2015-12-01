@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "A reworking of npm's init-package-json to make reusable prompt-based CLIs for making config.json files.",
   "dependencies": {
+    "chalk": "^1.1.1",
     "indian-ocean": "^1.0.1",
     "promzard": "~0.2.0",
     "read": "~1.0.1",
