@@ -4,11 +4,13 @@ var path = require('path');
 
 var fs = require('fs');
 var read = require('read');
+var extend = require('./extend.js')
 
 var _ = require('underscore');
+var io = require('indian-ocean');
 
 function dirExists(path){
-  return fs.existsSync(path);
+  return io.existsSync(path);
 }
 
 function init (dir, name_prefix, input, config, cb) {
@@ -47,7 +49,7 @@ function init (dir, name_prefix, input, config, cb) {
 
   if (config_exists){
     package = config_path;
-    pkg = _.extend(require(config_sample_path), require(config_path)); // extend the sample config so it will grab any new keys if you made additions the sample schema
+    pkg = extend(true, require(config_sample_path), require(config_path)); // extend the sample config so it will grab any new keys if you made additions the sample schema
   } else {
     package = config_sample_path;
     pkg = require(config_sample_path);

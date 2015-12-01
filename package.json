@@ -1,6 +1,6 @@
 {
   "name": "config-tree",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "main/index.js",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "A reworking of npm's init-package-json to make reusable prompt-based CLIs for making config.json files.",
   "dependencies": {
+    "indian-ocean": "^1.0.1",
     "promzard": "~0.2.0",
     "read": "~1.0.1",
     "underscore": "^1.7.0"
